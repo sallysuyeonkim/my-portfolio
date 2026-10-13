@@ -3,35 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suyeon Kim — Portfolio</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <title>Suyeon Kim — Hybrid Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;600&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 상단 메뉴 -->
-  <header class="nav">
-    <a href="index.html" class="logo">SUYEON KIM</a>
-    <nav>
-      <a href="index.html#about">ABOUT</a>
-      <div class="dropdown">
-        <a href="work/branding.html">WORK</a>
-        <ul class="submenu">
-          <li><a href="work/branding.html">Branding</a></li>
-          <li><a href="work/web.html">Web</a></li>
-          <li><a href="work/app.html">App</a></li>
-          <li><a href="work/digital-contents.html">Digital Contents</a></li>
-          <li><a href="work/motion.html">Motion</a></li>
-          <li><a href="work/editorial.html">Editorial</a></li>
-        </ul>
-      </div>
-      <a href="index.html#contact">CONTACT</a>
-    </nav>
-  </header>
+  <div class="about">
 
-  <!-- 첫 화면 (아직 비워둠) -->
-  <main class="home"></main>
+    <!-- 상단: 큰 이름 + 메뉴 -->
+    <header class="about-top">
+      <h1 class="hero-title">
+        <span>suyeon kim</span>
+        <span>Hybrid Designer</span>
+      </h1>
+    <nav class="menu">
+      <a href="index.html" class="is-active">about</a>
+      <a href="projects/branding.html">projects</a>
+      <a href="index.html#contact">contacts</a>
+    </nav>
+    </header>
+
+    <!-- 작업 분야 -->
+    <ul class="categories categories--about">
+    <li><a href="projects/branding.html">branding</a></li>
+    <li class="slash" aria-hidden="true">/</li>
+    <li><a href="projects/web.html">web</a></li>
+    <li class="slash" aria-hidden="true">/</li>
+    <li><a href="projects/app.html">app</a></li>
+    <li class="slash" aria-hidden="true">/</li>
+    <li><a href="projects/digital-contents.html">digital contents</a></li>
+    <li class="slash" aria-hidden="true">/</li>
+    <li><a href="projects/motion.html">motion graphic</a></li>
+    <li class="slash" aria-hidden="true">/</li>
+    <li><a href="projects/editorial.html">Editorial Design</a></li>
+    </ul>
+
+    <!-- 사진 + 소개글 -->
+    <section class="bio">
+      <div class="bio-photo">
+        <img src="images/profile.png" alt="디자이너 김수연 프로필 사진">
+      </div>
+      <div class="bio-text">
+        <p class="bio-ko">디자인은 보기 좋은 결과물을 만드는 일이 아니라, 문제를 발견하고 실질적인 결과로 연결하는 과정이라고 생각합니다. 그래서 기획과 아이데이션부터 디자인 실행, 피드백과 개선에 이르기까지 프로젝트 전반을 함께 고민합니다. 광고대행사와 IT 업계를 거치며 프로젝트에 필요한 역할을 직접 채워 왔습니다. 기획부터 실행까지 믿고 맡길 수 있는 디자이너가 필요하시다면, 함께하고 싶습니다.</p>
+        <p class="bio-en" lang="en">I believe design isn’t just about making things look good. It’s about uncovering problems and turning solutions into real results. That’s why I stay involved across the entire project, from planning and ideation to design execution, feedback, and iteration. Working across advertising agencies and the tech industry, I’ve stepped into whatever role each project needed. If you’re looking for a designer you can trust from concept to delivery, I’d love to work with you.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- 연락처 (가로 선 아래) -->
+  <footer id="contact" class="contact">
+    <a href="mailto:sally.suyeon.kim@gmail.com">sally.suyeon.kim@gmail.com</a>
+    <p class="copyright">Copyright 2026. suyeon kim all rights reserved.</p>
+  </footer>
 
 </body>
 </html>
