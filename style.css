@@ -3,7 +3,7 @@
   --bg: #fafafa;
   --text: #111;
   --muted: #666;
-  --side-margin: 80px; /* 화면 양끝 마진 */
+  --side-margin: 40px; /* 화면 양끝 마진 */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -41,4 +41,47 @@ body {
 /* ===== 첫 화면 ===== */
 .home {
   padding: 0 var(--side-margin);
+}
+
+/* ===== WORK 하위메뉴 (마우스를 올리면 펼쳐짐) ===== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 32px; /* WORK 글자 시작 위치에 맞춤 */
+  padding-top: 12px;
+  list-style: none;
+  z-index: 10;
+}
+.dropdown:hover .submenu,
+.dropdown:focus-within .submenu { display: block; }
+.nav .submenu a {
+  display: block;
+  margin-left: 0;
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+/* ===== 작업물 앨범 페이지 ===== */
+.album {
+  padding: 80px var(--side-margin) 120px;
+}
+.album-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개 */
+  gap: 16px;
+}
+.thumb {
+  display: block;
+  aspect-ratio: 4 / 3; /* 가로로 긴 직사각형 */
+  background: #e5e5e5; /* 이미지 넣기 전 임시 회색 */
 }
