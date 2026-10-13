@@ -3,8 +3,7 @@
   --bg: #fafafa;
   --text: #111;
   --muted: #666;
-  --line: #e5e5e5;
-  --accent: #4f46e5;
+  --side-margin: 80px; /* 화면 양끝 마진 */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,65 +15,30 @@ body {
   line-height: 1.6;
 }
 
-section, .nav, .footer {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-h2 { font-size: 14px; color: var(--muted); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 24px; }
-
 /* ===== 상단 메뉴 ===== */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 72px;
+  padding: 0 var(--side-margin);
+  white-space: nowrap; /* 이름·메뉴가 두 줄로 꺾이지 않게 */
 }
-.logo { font-weight: 700; color: var(--text); text-decoration: none; }
-.nav nav a { margin-left: 24px; color: var(--muted); text-decoration: none; }
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  text-decoration: none;
+}
+.nav nav a {
+  margin-left: 32px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
 .nav nav a:hover { color: var(--text); }
 
 /* ===== 첫 화면 ===== */
-.hero { padding-top: 120px; padding-bottom: 120px; }
-.eyebrow { color: var(--accent); font-weight: 600; margin-bottom: 16px; }
-.hero h1 { font-size: clamp(36px, 6vw, 64px); line-height: 1.2; letter-spacing: -0.02em; }
-.lead { margin-top: 24px; font-size: 18px; color: var(--muted); }
-
-/* ===== 작업물 ===== */
-.work { padding-bottom: 120px; }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 32px;
+.home {
+  padding: 0 var(--side-margin);
 }
-.card { cursor: pointer; }
-.thumb {
-  aspect-ratio: 4 / 3;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--c1), var(--c2));
-  margin-bottom: 16px;
-  transition: transform .3s;
-}
-.card:hover .thumb { transform: translateY(-4px); }
-.card h3 { font-size: 20px; }
-.card p { color: var(--muted); }
-.tag { display: inline-block; margin-top: 8px; font-size: 13px; color: var(--muted); }
-
-/* ===== 소개 ===== */
-.about { padding-bottom: 120px; border-top: 1px solid var(--line); padding-top: 80px; }
-.about p { font-size: 20px; max-width: 640px; }
-
-/* ===== 연락처 ===== */
-.footer { padding-top: 80px; padding-bottom: 48px; border-top: 1px solid var(--line); }
-.button {
-  display: inline-block;
-  background: var(--text);
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-}
-.button:hover { background: var(--accent); }
-.copyright { margin-top: 80px; font-size: 13px; color: var(--muted); }
