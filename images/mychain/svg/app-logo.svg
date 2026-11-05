@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="130" viewBox="0 0 130 130" fill="none">
+<g id="Mychain app logo">
+<rect width="129.27" height="129.27" rx="22" fill="#F7F6F9" />
+<g id="mychain logo" clip-path="url(#clip0_28_877)">
+<path id="Vector" d="M28 58.8784L55.0567 82.4621C57.6717 84.7414 61.0218 85.9915 64.5 85.9915C67.9697 85.9915 71.3283 84.7328 73.9433 82.4621L101 58.8784C79.3273 74.8929 49.6727 74.8929 28 58.8784Z" fill="#5B2FF9" />
+<path id="Vector_2" d="M64.5 58.8869C68.9084 58.8869 72.482 55.3305 72.482 50.9434C72.482 46.5564 68.9084 43 64.5 43C60.0917 43 56.5181 46.5564 56.5181 50.9434C56.5181 55.3305 60.0917 58.8869 64.5 58.8869Z" fill="#5B2FF9" />
+</g>
+</g>
+<defs>
+<clipPath id="clip0_28_877">
+<rect width="73" height="43" fill="white" transform="translate(28 43)" />
+</clipPath>
+</defs>
+</svg>

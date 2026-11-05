@@ -170,6 +170,15 @@ ul { list-style: none; }
   aspect-ratio: 597.33 / 478;
   background: var(--tile);
 }
+.tile--img { overflow: hidden; }
+.tile--img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.tile--img:hover img { transform: scale(1.03); }
 
 /* ===== 좁은 화면 (피그마에 없는 부분이라 최소한으로 맞춤) ===== */
 @media (max-width: 1200px) {

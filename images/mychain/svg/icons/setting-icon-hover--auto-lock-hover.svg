@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="592 697 24 24" fill="none"><g id="hover=auto lock hover">
+<g id="Group 1954_4">
+<path id="Ellipse 119_8" d="M613 709C613 704.029 608.971 700 604 700C599.029 700 595 704.029 595 709C595 713.971 599.029 718 604 718" stroke="white" stroke-width="1.2" stroke-linecap="round" />
+<path id="Vector 109_2" d="M604 704.5V709L606 711" stroke="white" stroke-linecap="round" />
+<path id="Vector 93_5" d="M609 713.303V712.803C609 711.975 609.672 711.303 610.5 711.303C611.328 711.303 612 711.975 612 712.803V713.303" stroke="white" stroke-width="1.2" />
+</g>
+<g id="Rectangle 392_2">
+<mask id="path-245-inside-7_28_877" fill="white">
+<rect x="607" y="713" width="7" height="6" rx="1" />
+</mask>
+<rect x="607" y="713" width="7" height="6" rx="1" stroke="white" stroke-width="2.4" mask="url(#path-245-inside-7_28_877)" />
+</g>
+</g>
+</svg>
