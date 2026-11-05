@@ -406,7 +406,7 @@
 }
 .changes {
   display: grid;
-  grid-template-columns: 1fr;       /* 카드마다 가로 전체 폭 */
+  grid-template-columns: 1fr 1fr;
   gap: 28px;
   margin-top: 72px;
 }
@@ -424,6 +424,7 @@
 .change-pops { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
 /* Change 03: 가로 전체를 쓰고, 설명은 왼쪽 · 팝업은 오른쪽 */
 .change--wide {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 56px;
@@ -495,7 +496,6 @@
   gap: 40px 28px;
   margin-top: 64px;
 }
-.screens--4 { margin-top: 40px; }
 
 /* 데이터 관리 흐름: 4단계 번호 카드 */
 .block--sep { border-top: 1px solid var(--gray-200); }
@@ -555,34 +555,6 @@
   font-size: 16px;
   color: var(--text);
   margin-bottom: 4px;
-}
-
-/* 송금 단계 */
-.steps {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-  margin-top: 48px;
-}
-.steps li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 600;
-  font-size: 17px;
-  padding-bottom: 16px;
-  border-bottom: 2px solid var(--mc-tertiary);
-}
-.steps span {
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--mc-secondary);
-  color: #fff;
-  font-size: 14px;
 }
 
 .callout {
@@ -1116,7 +1088,6 @@
   .arr-h { display: none; }
   .arr-v { display: inline; }
   .screens { grid-template-columns: 1fr 1fr; gap: 32px 16px; }
-  .steps { grid-template-columns: 1fr 1fr; gap: 16px; }
   .principles { grid-template-columns: 1fr; }
   .fonts, .ui-cols, .ic-groups, .navbars { grid-template-columns: 1fr; }
   .comp-grid { columns: 1; }
