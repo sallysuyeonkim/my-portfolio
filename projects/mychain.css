@@ -81,10 +81,18 @@
 .mc-meta {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  padding-top: 48px;
-  padding-bottom: 24px;
+  margin-top: 48px;
+  margin-bottom: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
+.mc-meta > div {
+  padding: 22px 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.mc-meta > div + div { border-left: 1px solid rgba(0, 0, 0, 0.12); }
+.mc-meta > div:first-child { padding-left: 0; }
 .mc-meta dt {
   font-family: "Roboto", sans-serif;
   font-size: 13px;
@@ -834,6 +842,8 @@
   .sg-row { grid-template-columns: 1fr; gap: 28px; }
   .ic-groups { grid-template-columns: 1fr 1fr; }
   .mc-meta { grid-template-columns: 1fr 1fr; }
+  .mc-meta > div:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .mc-meta > div:nth-child(-n+2) { border-bottom: 0; }
 }
 @media (max-width: 768px) {
   .type-table { font-size: 12px; }
