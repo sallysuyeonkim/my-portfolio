@@ -268,6 +268,167 @@
 .principles h4 { font-size: 18px; margin: 16px 0 10px; }
 .principles p { font-size: 15px; line-height: 1.7; color: #55535c; }
 
+/* 온보딩 동선: 화면 4개 + 단계 설명 */
+.ob-flow {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;                      /* 다른 화면 그리드와 같은 간격 */
+  margin-top: 56px;
+}
+.ob-flow li { position: relative; }
+.ob-flow li + li::before {        /* 화면 사이 화살표 */
+  content: "→";
+  position: absolute;
+  left: -14px;
+  top: 32%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: var(--mc-primary);
+}
+.ob-flow img {
+  display: block;
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 12px 40px rgba(40, 20, 110, 0.12), 0 0 0 1px rgba(0,0,0,0.04);
+  background: #fff;
+}
+.ob-step {
+  margin-top: 18px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--mc-secondary);
+}
+.ob-flow li > p:last-child {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #6d6a78;
+}
+.ob-flow li > p:last-child b {
+  display: block;
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+/* 설계 결정 카드: 문제 → 결정 → 효과 */
+.decisions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 72px;
+}
+.decision {
+  padding: 36px 32px;
+  border-radius: 20px;
+  background: var(--gray-100);
+}
+.decision-num {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mc-secondary);
+}
+.decision h3 {
+  margin: 8px 0 24px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+.decision dl > div {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid var(--gray-200);
+}
+.decision dt {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  padding-top: 2px;
+}
+.decision dd {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #55535c;
+}
+
+/* Iteration: 전후 비교 (08) */
+.ba {
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr;   /* Before | 화살표 | After */
+  align-items: center;
+  gap: 0;
+  margin-top: 56px;
+}
+.ba-arrow {                               /* 왼쪽 → 오른쪽 변화 강조 */
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  font-size: 22px;
+  color: var(--mc-secondary);
+}
+.ba-tag {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--gray-100);
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6d6a78;
+}
+.ba-tag--after { color: var(--mc-secondary); }
+.ba-shots { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.ba-shots img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 360 / 780;          /* 높이가 다른 화면도 같은 크기로, 위쪽 기준으로 자름 */
+  object-fit: cover;
+  object-position: top;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(40, 20, 110, 0.10), 0 0 0 1px rgba(0,0,0,0.04);
+}
+.ba-shots figcaption, .change-pops figcaption {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #6d6a78;
+  text-align: center;
+}
+.changes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 72px;
+}
+.change { padding: 36px 32px; border-radius: 20px; background: var(--gray-100); }
+.change h4 { margin: 8px 0 24px; font-size: 22px; letter-spacing: -0.02em; }  /* 07 결정 카드 제목과 같은 크기 */
+.change dl > div {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--gray-200);
+}
+.change dt { font-size: 13px; font-weight: 600; padding-top: 2px; }
+.change dd { font-size: 15px; line-height: 1.7; color: #55535c; }
+.change-pops { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+.change-pops img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(40, 20, 110, 0.10), 0 0 0 1px rgba(0,0,0,0.04);
+}
+
 /* 서비스 구조 */
 .flow {
   display: grid;
@@ -900,6 +1061,12 @@
   .screens { grid-template-columns: repeat(3, 1fr); }
   .principles { grid-template-columns: 1fr 1fr; }
   .data-flow { grid-template-columns: 1fr 1fr; }
+  .ob-flow { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+  .ob-flow li:nth-child(3)::before { display: none; }
+  .decisions { grid-template-columns: 1fr; }
+  .ba { grid-template-columns: 1fr; gap: 20px; }
+  .ba-arrow { transform: rotate(90deg); }
+  .changes { grid-template-columns: 1fr; }
   .data-flow li:nth-child(3)::before { display: none; }
   .sg-row { grid-template-columns: 1fr; gap: 28px; }
   .ic-groups { grid-template-columns: 1fr 1fr; }
@@ -909,6 +1076,11 @@
 }
 @media (max-width: 768px) {
   .data-flow { grid-template-columns: 1fr; }
+  .ob-flow { grid-template-columns: 1fr 1fr; gap: 32px 16px; }
+  .ob-flow li + li::before { display: none; }
+  .decision { padding: 28px 22px; }
+  .decision dl > div { grid-template-columns: 1fr; gap: 4px; }
+  .change dl > div { grid-template-columns: 1fr; gap: 4px; }
   .data-flow li + li::before { display: none; }
   .type-table { font-size: 12px; }
   .type-table th, .type-table td, .type-table .tt-group th { padding-left: 10px; padding-right: 10px; }
