@@ -501,6 +501,7 @@
 
 /* 타이포 */
 .fonts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.font-card:last-child { grid-column: 1 / -1; }
 .font-card { background: #fff; border-radius: 18px; padding: 28px; }
 .font-sample { font-size: 44px; line-height: 52px; font-weight: 600; letter-spacing: -0.02em; }
 .font-wordmark { display: block; height: 26px; margin: 13px 0; }
@@ -603,8 +604,6 @@
 .ic-row figure { width: 64px; text-align: center; }
 .ic-row figure img { display: block; height: 40px; max-width: 48px; margin: 0 auto; object-fit: contain; }
 .ic-row figcaption { font-size: 11px; color: #6d6a78; margin-top: 6px; }
-.ic-row--connect { justify-content: space-between; }
-.ic-row--connect img { width: 42px; height: 64px; }
 .ic-row--avatar { gap: 12px; margin-bottom: 12px; }
 .ic-row--avatar img { width: 40px; height: 40px; }
 
@@ -844,21 +843,6 @@
   font-size: 12px;
 }
 
-.slist div {
-  display: grid;
-  grid-template-columns: 24px 1fr 20px;
-  gap: 10px;
-  align-items: center;
-  padding: 9px 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  background: var(--gray-100);
-  margin-bottom: 6px;
-}
-.slist img { width: 24px; height: 24px; }
-.slist img:last-child { width: 20px; height: 20px; }
-.slist .is-on { background: var(--mc-primary); color: #fff; }
-.slist .inv { filter: brightness(0) invert(1); }
 
 .navbars { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .navbars img {
