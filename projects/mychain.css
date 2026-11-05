@@ -522,7 +522,13 @@
 
 .ic-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
 .ic-card { background: #fff; border-radius: 18px; padding: 24px; }
-.ic-card:nth-child(2) { grid-row: span 2; }
+.ic-card:nth-child(2) {
+  grid-row: span 2;
+  align-self: stretch;          /* 왼쪽 Navigation + Utility 높이에 맞춤 */
+  display: flex;
+  flex-direction: column;
+}
+.ic-card:nth-child(2) .ic-set { flex: 1; grid-auto-rows: 1fr; }
 .ic-title { font-weight: 700; font-size: 16px; margin-bottom: 18px; }
 .ic-title small { font-weight: 400; font-size: 12px; color: var(--gray-400); margin-left: 6px; }
 .ic-desc { font-size: 13px; color: #6d6a78; margin: -8px 0 16px; line-height: 1.6; }
@@ -554,7 +560,7 @@
 .ic-pair small { font-size: 10px; color: var(--gray-400); white-space: nowrap; }
 .ic-pair--one { grid-template-columns: 1fr; }
 .ic-sub { margin: 20px 0 10px; font-size: 12px; font-weight: 600; color: #6d6a78; }
-.ic-title + .ic-sub { margin-top: 4px; }
+.ic-legend + .ic-pairs { margin-top: 24px; }
 
 .ic-set { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .ic-set div {
@@ -568,6 +574,7 @@
   font-size: 13px;
 }
 .ic-set img { width: 24px; height: 24px; margin: 0 auto; }
+.ic-set span { font-size: 11px; color: #6d6a78; line-height: 1.3; }
 .ic-set b {
   display: grid;
   place-items: center;
@@ -656,9 +663,10 @@
 .lbtn--sub { background: #fff; box-shadow: inset 0 0 0 1.5px var(--mc-secondary); }
 
 /* 컴포넌트 */
-.comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
-.comp-grid .ui-card { margin: 0; }
-.ui-card--wide { grid-column: 1 / -1; }
+/* 카드를 두 세로줄에 차곡차곡 쌓아 위아래 간격을 16px로 통일 */
+.comp-grid { display: block; columns: 2; column-gap: 16px; }
+.comp-grid .ui-card { margin: 0 0 16px; break-inside: avoid; }
+.comp-grid .ui-card--wide { column-span: all; margin: 16px 0 0; }
 
 .toggle {
   display: inline-flex;
@@ -824,7 +832,7 @@
   .screens { grid-template-columns: repeat(3, 1fr); }
   .principles { grid-template-columns: 1fr 1fr; }
   .sg-row { grid-template-columns: 1fr; gap: 28px; }
-  .ic-groups, .comp-grid { grid-template-columns: 1fr 1fr; }
+  .ic-groups { grid-template-columns: 1fr 1fr; }
   .mc-meta { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 768px) {
@@ -844,7 +852,9 @@
   .screens { grid-template-columns: 1fr 1fr; gap: 32px 16px; }
   .steps { grid-template-columns: 1fr 1fr; gap: 16px; }
   .principles { grid-template-columns: 1fr; }
-  .fonts, .ui-cols, .ic-groups, .comp-grid, .navbars { grid-template-columns: 1fr; }
+  .fonts, .ui-cols, .ic-groups, .navbars { grid-template-columns: 1fr; }
+  .comp-grid { columns: 1; }
+  .comp-grid .ui-card--wide { margin-top: 0; }
   .ic-card:nth-child(2) { grid-row: auto; }
   .btn-grid { grid-template-columns: 1fr 1fr; }
   .ic-pairs { grid-template-columns: 1fr 1fr; }
