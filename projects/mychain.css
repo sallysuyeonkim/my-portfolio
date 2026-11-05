@@ -324,6 +324,47 @@
   margin-top: 64px;
 }
 .screens--4 { margin-top: 40px; }
+
+/* 데이터 관리 흐름: 4단계 번호 카드 */
+.block--sep { border-top: 1px solid var(--gray-200); }
+.data-flow {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;                     /* 아래 화면 그리드(.screens)와 같은 간격 */
+  margin-top: 48px;
+}
+.data-flow li {
+  position: relative;
+  padding: 24px 22px;
+  border-radius: 18px;
+  background: var(--gray-100);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6d6a78;
+}
+.data-flow li + li::before {     /* 단계 사이 화살표 */
+  content: "→";
+  position: absolute;
+  left: -14px;                   /* 간격(28px)의 가운데 */
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: var(--mc-primary);
+}
+.data-flow span {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mc-secondary);
+}
+.data-flow b {
+  display: block;
+  margin: 6px 0 6px;
+  font-size: 17px;
+  color: var(--text);
+}
 .screen img {
   display: block;
   width: 100%;
@@ -858,6 +899,8 @@
 @media (max-width: 1024px) {
   .screens { grid-template-columns: repeat(3, 1fr); }
   .principles { grid-template-columns: 1fr 1fr; }
+  .data-flow { grid-template-columns: 1fr 1fr; }
+  .data-flow li:nth-child(3)::before { display: none; }
   .sg-row { grid-template-columns: 1fr; gap: 28px; }
   .ic-groups { grid-template-columns: 1fr 1fr; }
   .mc-meta { grid-template-columns: 1fr 1fr; }
@@ -865,6 +908,8 @@
   .mc-meta > div:nth-child(-n+2) { border-bottom: 0; }
 }
 @media (max-width: 768px) {
+  .data-flow { grid-template-columns: 1fr; }
+  .data-flow li + li::before { display: none; }
   .type-table { font-size: 12px; }
   .type-table th, .type-table td, .type-table .tt-group th { padding-left: 10px; padding-right: 10px; }
   .type-table td { white-space: nowrap; }
