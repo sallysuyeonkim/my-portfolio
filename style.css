@@ -180,6 +180,39 @@ ul { list-style: none; }
 }
 .tile--img:hover img { transform: scale(1.03); }
 
+/* 썸네일에 마우스를 올리면 제목과 제작 시기가 보임 */
+.tile--img { position: relative; }
+.tile-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 28px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.35) 45%, rgba(0, 0, 0, 0) 75%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tile-info strong {
+  font-size: clamp(18px, 1.5vw, 24px);
+  font-weight: 600;
+  line-height: 1.1;
+  transform: translateY(8px);
+  transition: transform 0.3s;
+}
+.tile-info span {
+  font-size: 15px;
+  font-weight: 300;
+  transform: translateY(8px);
+  transition: transform 0.3s;
+}
+.tile--img:hover .tile-info,
+.tile--img:focus-visible .tile-info { opacity: 1; }
+.tile--img:hover .tile-info strong,
+.tile--img:hover .tile-info span { transform: none; }
+
 /* ===== 좁은 화면 (피그마에 없는 부분이라 최소한으로 맞춤) ===== */
 @media (max-width: 1200px) {
   .bio { padding-left: 0; }
