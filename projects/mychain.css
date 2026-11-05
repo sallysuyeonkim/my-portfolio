@@ -163,6 +163,8 @@
   margin-top: 64px;
 }
 .tab-card {
+  display: flex;
+  flex-direction: column;
   border-radius: 24px;
   padding: 40px;
   background: var(--gray-100);
@@ -176,6 +178,17 @@
 .tab-card h3 { font-size: 30px; margin: 8px 0 16px; letter-spacing: -0.02em; }
 .tab-card p { font-size: 16px; line-height: 1.7; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+/* 각 탭 카드 아래 부가 설명: 구분선 아래 작은 글씨 */
+.tab-card .tab-card-note {
+  margin-top: auto;              /* 두 카드의 설명 시작선을 맞춤 */
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-300);
+  font-size: 15px;
+  line-height: 1.75;
+  color: #6d6a78;
+}
+.tab-card .chips { margin-bottom: 28px; }
+.tab-card-note b { color: #44424a; }
 .chips li {
   font-size: 13px;
   padding: 6px 14px;
