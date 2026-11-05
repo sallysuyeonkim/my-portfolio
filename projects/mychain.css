@@ -269,12 +269,15 @@
   color: var(--mc-secondary);
 }
 .flow-note { font-size: 13px; color: #8a8796; }
+.arr-v { display: none; }
 .flow-col { position: relative; }
+.flow-box { position: relative; }
 .flow-arrow {
   position: absolute;
-  right: -24px;
+  right: -12px;            /* 두 카드 사이 간격(24px)의 정확히 가운데 */
   top: 50%;
-  transform: translate(50%, -10%);
+  transform: translate(50%, -50%);
+  white-space: nowrap;
   z-index: 1;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
@@ -836,6 +839,8 @@
   .cols-2, .tab-cards, .goals, .problems, .flow { grid-template-columns: 1fr; }
   .tab-card { padding: 28px; }
   .flow-arrow { position: static; transform: none; display: inline-block; margin-top: 12px; }
+  .arr-h { display: none; }
+  .arr-v { display: inline; }
   .screens { grid-template-columns: 1fr 1fr; gap: 32px 16px; }
   .steps { grid-template-columns: 1fr 1fr; gap: 16px; }
   .principles { grid-template-columns: 1fr; }
