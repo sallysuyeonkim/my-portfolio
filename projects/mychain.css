@@ -406,7 +406,7 @@
 }
 .changes {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;       /* 카드마다 가로 전체 폭 */
   gap: 28px;
   margin-top: 72px;
 }
@@ -424,7 +424,6 @@
 .change-pops { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
 /* Change 03: 가로 전체를 쓰고, 설명은 왼쪽 · 팝업은 오른쪽 */
 .change--wide {
-  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 56px;
