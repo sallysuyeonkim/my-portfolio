@@ -286,39 +286,6 @@
   white-space: nowrap;
 }
 
-.ia { margin-top: 64px; }
-.ia-root {
-  display: inline-block;
-  background: var(--mc-dark);
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 12px;
-  font-weight: 600;
-}
-.ia-branches {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 24px;
-  padding-top: 24px;
-  border-top: 1px dashed var(--mc-primary);
-}
-.ia-tab {
-  font-weight: 700;
-  font-size: 17px;
-  color: var(--mc-secondary);
-  margin-bottom: 12px;
-}
-.ia-branch--common .ia-tab { color: var(--text); }
-.ia-branch li {
-  font-size: 15px;
-  line-height: 1.6;
-  padding: 10px 14px;
-  margin-bottom: 8px;
-  background: #fff;
-  border-radius: 10px;
-}
-
 /* 화면 모음 */
 .screens {
   display: grid;
@@ -866,7 +833,7 @@
   .mc-hero { grid-template-columns: 1fr; padding-top: 48px; border-radius: 20px; }
   .mc-hero-lead { padding-bottom: 0; }
   .mc-hero-phone { width: 240px; }
-  .cols-2, .tab-cards, .goals, .problems, .flow, .ia-branches { grid-template-columns: 1fr; }
+  .cols-2, .tab-cards, .goals, .problems, .flow { grid-template-columns: 1fr; }
   .tab-card { padding: 28px; }
   .flow-arrow { position: static; transform: none; display: inline-block; margin-top: 12px; }
   .screens { grid-template-columns: 1fr 1fr; gap: 32px 16px; }
