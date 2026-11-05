@@ -422,6 +422,18 @@
 .change dt { font-size: 13px; font-weight: 600; padding-top: 2px; }
 .change dd { font-size: 15px; line-height: 1.7; color: #55535c; }
 .change-pops { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+/* Change 03: 가로 전체를 쓰고, 설명은 왼쪽 · 팝업은 오른쪽 */
+.change--wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 56px;
+  align-items: start;
+}
+.change--wide .decision-num,
+.change--wide h4,
+.change--wide dl { grid-column: 1; }
+.change--wide .change-pops { grid-column: 2; grid-row: 1 / span 3; margin-top: 0; align-self: center; }
 .change-pops img {
   display: block;
   width: 100%;
@@ -1067,6 +1079,8 @@
   .ba { grid-template-columns: 1fr; gap: 20px; }
   .ba-arrow { transform: rotate(90deg); }
   .changes { grid-template-columns: 1fr; }
+  .change--wide { grid-template-columns: 1fr; }
+  .change--wide .change-pops { grid-column: 1; grid-row: auto; margin-top: 16px; }
   .data-flow li:nth-child(3)::before { display: none; }
   .sg-row { grid-template-columns: 1fr; gap: 28px; }
   .ic-groups { grid-template-columns: 1fr 1fr; }
