@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;600&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=4">
 </head>
 <body>
 
@@ -20,13 +20,14 @@
     </a>
     <nav class="menu">
       <a href="../index.html">about</a>
-      <a href="../projects/branding.html" class="is-active">projects</a>
-      <a href="../index.html#contact">contacts</a>
+      <a href="../projects/all.html" class="is-active">projects</a>
     </nav>
   </header>
 
   <!-- 카테고리 선택 -->
   <ul class="categories categories--projects">
+    <li><a href="../projects/all.html">ALL</a></li>
+    <li class="slash" aria-hidden="true">/</li>
     <li><a href="../projects/branding.html">branding</a></li>
     <li class="slash" aria-hidden="true">/</li>
     <li><a href="../projects/app.html">web•app</a></li>
@@ -43,6 +44,7 @@
     <a href="ritz.html" class="tile tile--img" aria-label="리츠 디지털 콘텐츠 보기">
       <img src="../images/ritz/cover.jpg" alt="리츠 디지털 콘텐츠 표지">
       <span class="tile-info">
+        <em class="tile-cat">digital contents</em>
         <strong>Ritz digital Contents</strong>
         <span>2021</span>
       </span>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyMint — Suyeon Kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="../style.css?v=4">
+  <link rel="stylesheet" href="mymint.css?v=2">
+</head>
+<body class="mm">
+
+  <!-- 상단: 작은 로고 + 메뉴 (다른 프로젝트 페이지와 동일) -->
+  <header class="top">
+    <a href="../index.html" class="logo">
+      <span>suyeon kim</span>
+      <span>Hybrid Designer</span>
+    </a>
+    <nav class="menu">
+      <a href="../index.html">about</a>
+      <a href="../projects/all.html" class="is-active">projects</a>
+    </nav>
+  </header>
+
+  <a href="app.html" class="mm-back">← WEB•APP</a>
+
+  <!-- ========== 표지 ========== -->
+  <p class="mm-title">MyMint Product Design</p>
+  <section class="mm-hero">
+    <div class="mm-hero-text">
+      <p class="mm-eyebrow">Web UX/UI · Bike Ownership Platform</p>
+      <h1>MyMint</h1>
+      <p class="mm-hero-lead">자전거 소유권을 디지털로 인증하고,<br>사고팔 때는 소유권까지 안전하게 넘겨 주는 플랫폼</p>
+    </div>
+    <div class="mm-hero-shot" aria-hidden="true">
+      <div class="browser">
+        <span class="browser-bar"><i></i><i></i><i></i></span>
+        <img src="../images/mymint/mm-landing-hero.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <dl class="mm-meta wrap">
+    <div><dt>Role</dt><dd>양도 프로세스 기획 · 화면 설계 · UI 디자인</dd></div>
+    <div><dt>Contribution</dt><dd>화면 설계 · UI 디자인 100%<br>양도 프로세스 기획 전담</dd></div>
+    <div><dt>Platform</dt><dd>Web (PC · Mobile)</dd></div>
+    <div><dt>Tool</dt><dd>Figma</dd></div>
+  </dl>
+
+  <!-- ========== 01. 서비스 소개 ========== -->
+  <section class="block wrap">
+    <p class="block-num">01 — Overview</p>
+    <h2>자전거에 '주인'이라는 이름을<br>다시 붙이는 서비스</h2>
+    <p class="lead">MyMint는 도난과 분실을 예방하고 안전한 거래를 돕는 자전거 등록 플랫폼입니다. 차대번호와 사진으로 자전거를 등록하면 디지털 인증서가 발급되고, 중고거래 때 이 인증서를 공유하거나 검색해 진짜 주인인지 확인할 수 있습니다.</p>
+
+    <div class="values">
+      <article><p class="value-num">01</p><h3>도난 · 분실 예방</h3><p>자전거를 등록하는 것만으로 도난과 분실을 미리 억제합니다.</p></article>
+      <article><p class="value-num">02</p><h3>안심 중고거래</h3><p>등록된 자전거는 소유 확인이 가능해 믿을 수 있는 거래가 됩니다.</p></article>
+      <article><p class="value-num">03</p><h3>도난 · 분실 대응</h3><p>도난 · 분실 시 주인을 확인하고 되찾을 가능성을 높입니다.</p></article>
+    </div>
+
+    <div class="scope">
+      <p class="scope-label">My Scope</p>
+      <p>서비스 전반의 기획은 다른 기획자가 맡았고, 저는 <b>소유권 양도 프로세스의 기획</b>과 <b>서비스 전체의 화면 설계 · UI 디자인</b>을 맡았습니다. 이 페이지는 제가 처음부터 설계한 양도 시스템을 중심으로 정리했습니다.</p>
+    </div>
+  </section>
+
+  <!-- ========== 02. 서비스 화면 ========== -->
+  <section class="block block--gray">
+    <div class="wrap">
+      <p class="block-num">02 — Service</p>
+      <h2>등록하고, 증명하고, 확인하는<br>서비스의 핵심 화면</h2>
+      <p class="lead">사용자는 자전거를 등록해 디지털 인증서를 받고, 중고거래 때 인증서를 공유하거나 상대가 차대번호로 검색해 진짜 주인인지 확인합니다. 이 흐름에 필요한 <b>서비스 전체 화면을 설계하고 디자인</b>했습니다.</p>
+
+      <div class="screens">
+        <figure>
+          <div class="browser browser--flat"><span class="browser-bar"><i></i><i></i><i></i></span><img src="../images/mymint/mm-register.jpg" alt="자전거 사진과 차대번호를 입력하는 등록 화면" loading="lazy"></div>
+          <figcaption><b>01 자전거 등록</b>자전거 전체 사진과 차대번호 사진을 올리고 브랜드 · 차대번호를 입력합니다. 차대번호 위치와 촬영 팁을 화면 안에서 안내합니다.</figcaption>
+        </figure>
+        <figure>
+          <div class="browser browser--flat"><span class="browser-bar"><i></i><i></i><i></i></span><img src="../images/mymint/mm-cert.jpg" alt="공유 링크로 열리는 디지털 인증서 화면" loading="lazy"></div>
+          <figcaption><b>02 디지털 인증서</b>등록이 끝나면 인증서가 발급됩니다. 공유 링크를 보내면 회원이 아니어도 소유자와 자전거 상태를 확인할 수 있습니다.</figcaption>
+        </figure>
+        <figure>
+          <div class="browser browser--flat"><span class="browser-bar"><i></i><i></i><i></i></span><img src="../images/mymint/mm-search.jpg" alt="차대번호로 자전거를 검색한 결과 화면" loading="lazy"></div>
+          <figcaption><b>03 자전거 검색</b>중고거래 상대는 차대번호만으로 등록 여부와 소유자, 현재 상태를 조회합니다.</figcaption>
+        </figure>
+      </div>
+
+      <div class="mypage">
+        <div class="browser browser--flat"><span class="browser-bar"><i></i><i></i><i></i></span><img src="../images/mymint/mm-mypage.jpg" alt="등록한 자전거 카드가 모여 있는 마이페이지 전체 화면" loading="lazy"></div>
+        <div class="mypage-text">
+          <p class="mypage-label">04 마이페이지</p>
+          <h3>모든 관리가 이루어지는<br>인증서 카드</h3>
+          <p>등록한 자전거는 마이페이지에 인증서 모양의 카드로 모입니다. 카드 하나에서 상태를 바꾸고, 링크 · QR로 공유하고, 양도까지 할 수 있도록 설계했습니다.</p>
+          <ul class="states">
+            <li style="--dot:#9AA0A6"><b>등록 대기</b>등록을 신청하고 확인을 기다리는 상태</li>
+            <li style="--dot:#00B38B"><b>정상</b>인증이 끝난 상태. '양도' 버튼이 활성화됩니다.</li>
+            <li style="--dot:#F5534F"><b>분실 / 도난</b>소유자가 직접 바꾸는 상태. 검색 결과에도 표시됩니다.</li>
+            <li style="--dot:#FF8A1F"><b>거래 중</b>양도를 요청한 상태. 72시간 카운트다운과 '취소' 버튼이 나타납니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 03. 양도 한눈에 보기 ========== -->
+  <section class="block wrap">
+    <p class="block-num">03 — Transfer at a glance</p>
+    <h2>카드에서 시작해 카드에서 끝나는<br>소유권 양도</h2>
+    <p class="lead">여기서부터는 제가 기획부터 맡은 양도 기능입니다. 양도인과 양수인은 각자의 마이페이지 카드에서 양도를 시작하고, 승인하고, 결과를 확인합니다.</p>
+
+    <div class="journey">
+      <ol class="journey-steps">
+        <li>
+          <div class="journey-img"><img src="../images/mymint/mm-card-start.png" alt="양도 버튼이 있는 자전거 카드" loading="lazy"></div>
+          <p class="journey-who">양도인</p>
+          <p><b>01 양도 시작</b>마이페이지의 자전거 카드에서 '양도' 버튼을 누릅니다.</p>
+        </li>
+        <li>
+          <div class="journey-img"><img src="../images/mymint/mm-form.jpg" alt="새 소유자 이메일 입력 화면" loading="lazy"></div>
+          <p class="journey-who">양도인</p>
+          <p><b>02 이메일 입력</b>넘길 자전거를 확인하고 새 소유자의 Gmail을 입력합니다.</p>
+        </li>
+        <li>
+          <div class="journey-img"><img src="../images/mymint/mm-confirm-pop.png" alt="양도 전 확인 팝업" loading="lazy"></div>
+          <p class="journey-who">양도인</p>
+          <p><b>03 최종 확인</b>되돌릴 수 없는 절차임을 확인하고 양도를 진행합니다.</p>
+        </li>
+        <li>
+          <div class="journey-img"><img src="../images/mymint/mm-card-sender.png" alt="양도 대기 중인 자전거 카드" loading="lazy"></div>
+          <p class="journey-who">양도인</p>
+          <p><b>04 승인 대기</b>카드에 72시간 카운트다운이 표시되고, 승인 전까지 취소할 수 있습니다.</p>
+        </li>
+        <li>
+          <div class="journey-img"><img src="../images/mymint/mm-card-receiver.png" alt="승인 버튼이 있는 양수인 카드" loading="lazy"></div>
+          <p class="journey-who journey-who--to">양수인</p>
+          <p><b>05 양도 승인</b>양수인은 자전거를 받은 뒤 승인합니다. 72시간이 지나면 자동 승인됩니다.</p>
+        </li>
+        <li>
+          <div class="journey-img"><img src="../images/mymint/mm-card-done.png" alt="소유권이 넘어온 자전거 카드" loading="lazy"></div>
+          <p class="journey-who journey-who--to">양수인</p>
+          <p><b>06 양도 완료</b>새 주인의 계정에 카드가 추가되고, 이전 주인의 카드는 사라집니다.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========== 04. 문제 ========== -->
+  <section class="block block--gray">
+    <div class="wrap">
+      <p class="block-num">04 — Problem</p>
+      <h2>자전거를 팔면,<br>소유권은 어디로 가야 할까</h2>
+      <p class="lead">등록만 있고 양도가 없다면, 자전거를 판 뒤에도 인증서는 이전 주인의 계정에 남고 새 주인은 처음부터 다시 등록해야 합니다. 중고거래의 신뢰를 높이려면 <b>거래가 끝나는 순간 소유권도 함께 넘어가야</b> 했습니다.</p>
+
+      <div class="problems">
+        <article><h3>되돌릴 수 없는 절차</h3><p>소유권 이전은 한 번 완료되면 되돌릴 수 없습니다. 잘못된 상대나 다른 자전거로 양도하는 실수를 막아야 했습니다.</p></article>
+        <article><h3>아직 가입하지 않은 상대</h3><p>중고거래 상대는 MyMint 회원이 아닐 때가 많습니다. 가입하지 않은 사람에게도 양도가 끊기지 않고 이어져야 했습니다.</p></article>
+        <article><h3>끝나지 않는 대기 상태</h3><p>상대가 응답하지 않으면 자전거가 '양도 중'에 계속 묶여 있게 됩니다. 언제 끝나는지 분명한 기준이 필요했습니다.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 05. 양도 플로우 ========== -->
+  <section class="block wrap">
+    <p class="block-num">05 — Transfer Flow</p>
+    <h2>양수자의 가입 여부에 따라<br>두 갈래로 이어지는 흐름</h2>
+    <p class="lead">양도인은 양수자의 이메일만 입력하면 됩니다. 이미 회원이면 바로 양수 요청이 가고, 아직 회원이 아니면 초대 메일을 보내 가입과 동시에 같은 승인 단계로 합류하도록 설계했습니다.</p>
+
+    <div class="flow">
+      <div class="flow-row">
+        <div class="node node--start"><b>양도 신청</b><span>양수자 이메일 입력</span></div>
+        <div class="arrow">→</div>
+        <div class="node node--q"><b>가입한 회원인가?</b></div>
+        <div class="arrow"><em>Y</em>→</div>
+        <div class="node"><b>양수 요청 메일</b><span>마이페이지에 승인 카드 노출</span></div>
+        <div class="arrow">→</div>
+        <div class="node node--q"><b>승인했는가?</b><span>72시간 지나면 자동 승인</span></div>
+        <div class="arrow"><em>Y</em>→</div>
+        <div class="node node--end"><b>양수도 완료</b></div>
+      </div>
+      <div class="flow-down"><em>N</em>↓</div>
+      <div class="flow-row flow-row--sub">
+        <div class="node"><b>초대 메일 발송</b><span>Gmail로만 초대 가능</span></div>
+        <div class="arrow">→</div>
+        <div class="node node--q"><b>72시간 안에 가입했는가?</b></div>
+        <div class="arrow"><em>Y</em>→</div>
+        <div class="node node--join"><b>승인 단계로 합류</b><span>가입 즉시 양수 요청으로 전환</span></div>
+      </div>
+      <p class="flow-note"><em>N</em> 72시간 안에 가입하지 않으면 양도가 만료되고, 해당 자전거의 소유권도 함께 만료됩니다.</p>
+    </div>
+
+    <div class="result">
+      <div><p class="result-who">양도인</p><p>양도 완료 알림과 메일을 받고, 내 자전거 카드가 사라집니다.</p></div>
+      <div><p class="result-who">양수인</p><p>양수한 자전거 카드가 추가되고, 등록일은 양도받은 날짜로 바뀝니다.</p></div>
+    </div>
+  </section>
+
+  <!-- ========== 06. 양도 정책 ========== -->
+  <section class="block block--gray">
+    <div class="wrap">
+      <p class="block-num">06 — Policy</p>
+      <h2>모든 경우의 수를<br>네 가지 결과로 정리</h2>
+      <p class="lead">양도 요청 이후 일어날 수 있는 상황을 취소 · 만료 · 거부 · 승인으로 나누고, 상황마다 누가 무엇을 할 수 있는지 먼저 정한 뒤 화면을 설계했습니다.</p>
+
+      <div class="policy">
+        <article>
+          <p class="policy-tag">취소 · 양도인</p>
+          <h3>승인 전까지만 취소</h3>
+          <p>메일을 잘못 입력했거나 다른 자전거를 잘못 양도한 경우, 양수인이 승인하기 전까지 양도인이 직접 취소할 수 있습니다. 취소하면 양수인에게 취소 메일이 가고, 미가입자에게 보낸 승인 요청도 무효가 됩니다.</p>
+        </article>
+        <article>
+          <p class="policy-tag">만료 · 72시간</p>
+          <h3>양도한 순간부터 72시간</h3>
+          <p>가입자든 미가입자든 양도인이 양도한 순간을 기준으로 72시간을 똑같이 적용했습니다. 회원은 기간이 지나면 자동 승인되고, 미가입자가 가입하지 않으면 양도와 소유권이 함께 만료됩니다.</p>
+        </article>
+        <article>
+          <p class="policy-tag">거부 · 양수인</p>
+          <h3>거부 버튼은 두지 않음</h3>
+          <p>양수인에게는 거부 기능을 두지 않았습니다. 잘못된 요청은 양도인이 취소하거나 72시간이 지나 정리되도록 해, 선택지를 줄이고 흐름을 단순하게 유지했습니다.</p>
+        </article>
+        <article>
+          <p class="policy-tag">승인 · 양수인</p>
+          <h3>승인하면 즉시 이전</h3>
+          <p>양수인이 승인 버튼을 누르면 바로 소유권이 넘어갑니다. 양도인에게는 완료 알림과 메일이 가고 카드가 삭제되며, 양수인에게는 새 카드가 추가됩니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 07. 양도인 화면 ========== -->
+  <section class="block wrap">
+    <p class="block-num">07 — Key Screens · 양도인</p>
+    <h2>이메일 하나로 시작하고,<br>진행 상황은 카드에서 확인</h2>
+    <p class="lead">마이페이지의 자전거 카드에서 양도를 시작합니다. 양도 화면에는 넘길 자전거의 정보를 다시 보여 줘 다른 자전거를 고르는 실수를 막고, 입력할 것은 새 소유자의 이메일 하나로 줄였습니다.</p>
+
+    <div class="shots shots--2">
+      <figure class="shot">
+        <img src="../images/mymint/mm-form.jpg" alt="자전거 소유권 양도하기 화면" loading="lazy">
+        <figcaption><b>양도하기</b>넘길 자전거 정보와 함께 새 소유자의 Gmail을 입력합니다.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="../images/mymint/mm-form-error.jpg" alt="Gmail이 아닌 이메일을 입력한 상태" loading="lazy">
+        <figcaption><b>입력 제한</b>Gmail이 아닌 주소는 입력 단계에서 바로 막고 이유를 안내합니다.</figcaption>
+      </figure>
+    </div>
+
+    <div class="stage">
+      <figure class="shot shot--pop">
+        <img src="../images/mymint/mm-confirm-pop.png" alt="소유권 양도 전 확인 팝업" loading="lazy">
+        <figcaption><b>양도 전 확인</b>되돌릴 수 없는 절차라는 점을 한 번 더 알리고, 실제 거래가 끝난 경우에만 진행하도록 합니다.</figcaption>
+      </figure>
+      <figure class="shot shot--pop">
+        <img src="../images/mymint/mm-invite-pop.png" alt="미가입 Gmail 안내 팝업" loading="lazy">
+        <figcaption><b>미가입자 안내</b>아직 가입하지 않은 Gmail이면 초대 메일을 보내고, 가입 후 양도가 자동으로 활성화된다고 알려 줍니다.</figcaption>
+      </figure>
+    </div>
+
+    <div class="pair">
+      <figure class="shot shot--card">
+        <img src="../images/mymint/mm-card-sender.png" alt="양도 대기 중인 자전거 카드" loading="lazy">
+      </figure>
+      <div class="pair-text">
+        <h3>양도 대기 중인 카드</h3>
+        <p>양도를 신청한 자전거는 카드 상태가 '거래 중'으로 바뀌고, 사진 위에 자동 승인까지 남은 시간이 카운트다운됩니다. 양도인은 같은 자리의 <b>취소</b> 버튼으로 승인 전까지 언제든 양도를 거둘 수 있습니다.</p>
+        <figure class="shot shot--pop shot--inline">
+          <img src="../images/mymint/mm-cancel-pop.png" alt="양도신청 취소 팝업" loading="lazy">
+          <figcaption>취소하면 양수인에게 보낸 신청이 무효가 된다는 점을 미리 알립니다.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 08. 양수인 화면 ========== -->
+  <section class="block block--gray">
+    <div class="wrap">
+      <p class="block-num">08 — Key Screens · 양수인</p>
+      <h2>받을 자전거를 가장 먼저,<br>승인은 수령한 뒤에</h2>
+      <p class="lead">양수인의 마이페이지에서는 승인이 필요한 카드를 맨 앞에 보여 주고, 72시간 카운트다운과 승인 버튼을 함께 두었습니다. 승인 화면에서는 실제로 자전거를 받은 뒤에만 승인하도록 경고 문구를 붙였습니다.</p>
+
+      <div class="pair pair--reverse">
+        <figure class="shot shot--card">
+          <img src="../images/mymint/mm-card-receiver.png" alt="양도 승인 요청을 받은 자전거 카드" loading="lazy">
+        </figure>
+        <figure class="shot shot--wide">
+          <img src="../images/mymint/mm-approve.jpg" alt="양도 승인 화면" loading="lazy">
+          <figcaption><b>양도 승인</b>"자전거를 실제로 수령하신 후에만 승인해주세요. 승인 시 되돌릴 수 없습니다." 승인 직전에 마지막으로 확인하게 합니다.</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="sub-h">상태를 놓치지 않게 하는 알림과 메일</h3>
+      <p class="sub-p">양도는 두 사람이 서로 다른 시간에 움직이는 과정이라, 단계가 바뀔 때마다 마이페이지 알림과 메일로 알렸습니다. 알림은 색으로 상태를 구분했습니다.</p>
+
+      <ul class="alerts">
+        <li><span class="badge badge--wait">양도 요청</span>양도승인 대기 중인 자전거가 있습니다. (1건)</li>
+        <li><span class="badge badge--ok">양도 승인</span>자이언트 ATX Pro의 소유권이 자동 승인되었습니다.</li>
+        <li><span class="badge badge--ok">양도 완료</span>콩님에게 자이언트 ATX Pro 소유권 양도가 완료되었습니다.</li>
+        <li><span class="badge badge--end">양도 만료</span>자이언트 ATX Pro 소유권 양도가 만료되어 소유권이 소멸되었습니다.</li>
+      </ul>
+
+      <div class="mails">
+        <article class="mail">
+          <p class="mail-to">미가입 양수인에게</p>
+          <p class="mail-subject">[MyMint] 자전거 양도 초대가 도착했습니다.</p>
+          <p>[양도인 닉네임]님이 회원님께 '{자전거 이름}' 소유권을 양도하려고 합니다. 양도를 받으려면 MyMint 계정이 필요합니다. 가입이 완료되면 양도 요청이 자동으로 활성화됩니다.</p>
+          <span class="mail-btn">MyMint 가입하기</span>
+        </article>
+        <article class="mail">
+          <p class="mail-to">양도인에게 · 만료</p>
+          <p class="mail-subject">[MyMint] 자전거 양도요청이 만료되어 소유권이 해제되었습니다.</p>
+          <p>양도 기한(72시간)이 지나 해당 자전거의 소유권이 자동으로 만료되었습니다. 필요하다면 MyMint에서 다시 등록해 소유권을 인증할 수 있습니다.</p>
+          <span class="mail-btn">자전거 재등록하기</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 09. UX Decision ========== -->
+  <section class="block wrap">
+    <p class="block-num">09 — UX Decision</p>
+    <h2>양도를 설계하며<br>내린 결정들</h2>
+
+    <div class="decisions">
+      <article class="decision">
+        <p class="decision-num">Decision 01</p>
+        <h3>Gmail로만 양도받을 수 있게</h3>
+        <dl>
+          <div><dt>문제</dt><dd>미가입자에게 양도하려면, 그 사람이 나중에 가입했을 때 양도 요청과 계정을 정확히 이어 줄 기준이 필요했습니다.</dd></div>
+          <div><dt>결정</dt><dd>MyMint는 Google 계정으로 가입하는 서비스라, 양수자 이메일을 Gmail로 제한했습니다. 같은 Gmail로 가입하면 대기 중이던 양도가 자동으로 연결됩니다.</dd></div>
+          <div><dt>화면</dt><dd>입력창 옆에 "Google 계정으로 가입한 Gmail로만 양도받을 수 있습니다"를 미리 적고, 다른 주소는 입력 단계에서 막았습니다.</dd></div>
+        </dl>
+      </article>
+      <article class="decision">
+        <p class="decision-num">Decision 02</p>
+        <h3>하나의 시간 기준, 72시간</h3>
+        <dl>
+          <div><dt>문제</dt><dd>가입자와 미가입자의 만료 기준을 따로 두면, 양도인 입장에서 언제 끝나는지 예측하기 어려웠습니다.</dd></div>
+          <div><dt>결정</dt><dd>누구에게 보냈든 양도한 순간부터 72시간으로 통일했습니다. 회원은 72시간 뒤 자동 승인, 미가입자는 72시간 뒤 만료됩니다.</dd></div>
+          <div><dt>화면</dt><dd>양도인과 양수인의 카드 모두에 남은 시간을 카운트다운으로 보여 줘, 지금 어디까지 왔는지 한눈에 알 수 있게 했습니다.</dd></div>
+        </dl>
+      </article>
+      <article class="decision decision--wide">
+        <div class="decision-body">
+          <p class="decision-num">Decision 03</p>
+          <h3>'소유권 양도 생략'이라는 출구</h3>
+          <dl>
+            <div><dt>문제</dt><dd>자전거는 이미 넘겼지만, 새 주인이 디지털 소유권을 원하지 않는 경우도 있었습니다. 처음에는 "오프라인 양도 완료"라는 이름을 검토했지만, 양도를 한 경우와 하지 않은 경우 모두에 해당하는 말이라 사용자가 헷갈릴 수 있었습니다.</dd></div>
+            <div><dt>결정</dt><dd>양도 전 확인 팝업에 <b>소유권 양도 생략</b> 버튼을 두고, 사유를 고르면 내 계정에서 자전거를 지우고 플랫폼의 소유 기록을 끝내도록 했습니다. 이 결정도 되돌릴 수 없다는 점을 화면에서 분명히 알렸습니다.</dd></div>
+          </dl>
+        </div>
+        <figure class="shot">
+          <img src="../images/mymint/mm-skip-form.jpg" alt="소유권 양도 생략 사유 선택 화면" loading="lazy">
+          <figcaption>양도 생략 사유: "양수자가 디지털 소유권을 원치 않습니다" 또는 직접 입력</figcaption>
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <footer id="contact" class="contact">
+    <a href="mailto:sally.suyeon.kim@gmail.com">sally.suyeon.kim@gmail.com</a>
+    <p class="copyright">Copyright 2026. suyeon kim all rights reserved.</p>
+  </footer>
+
+</body>
+</html>
