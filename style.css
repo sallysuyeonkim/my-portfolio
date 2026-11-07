@@ -68,6 +68,7 @@ ul { list-style: none; }
 }
 .hero-title span { display: block; }
 .hero-title span + span { margin-top: 0.078em; } /* 두 줄 사이 간격 */
+.hero-title .mo-br { display: none; }   /* 모바일에서만 Hybrid / Designer 줄바꿈 */
 
 .categories--about { margin-top: 24.6px; }
 
@@ -266,7 +267,9 @@ ul { list-style: none; }
     background: none;
     cursor: pointer;
   }
-  .about-top .nav-toggle { top: -57px; right: -8px; margin-top: 0; }   /* 다른 페이지와 같은 높이 · 오른쪽 끝 */
+  .about { padding-top: 28px; }
+  .hero-title .mo-br { display: inline; }
+  .about-top .nav-toggle { top: calc(min(110px, 10vw) * 0.47); right: -8px; margin-top: -20px; }   /* 이름 첫 줄 가운데와 수평 */
   .nav-toggle span {
     display: block;
     height: 2px;
