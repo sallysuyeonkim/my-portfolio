@@ -1,0 +1,213 @@
+/* ===== 모션그래픽 상세페이지 (공통) ===== */
+/* 사이트 공통(style.css) 위에 영상 페이지에만 필요한 스타일을 더한다 */
+
+.mo {
+  --mo-max: 1120px;
+  --mo-point: var(--accent);   /* 페이지마다 바꿔 쓰는 강조색 */
+  word-break: keep-all;
+}
+
+.mo-hero,
+.mo-about,
+.mo-stills {
+  width: calc(100% - var(--side-margin) * 2);
+  max-width: var(--mo-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mo-back {
+  display: inline-block;
+  margin: 40px var(--side-margin) 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: var(--muted);
+}
+.mo-back:hover { color: var(--accent); }
+
+.mo-title {
+  margin-top: 16px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 0.94;
+}
+
+/* ----- 1. 영상 썸네일 (누르면 영상 링크로 이동) ----- */
+.mo-hero { margin-top: 32px; }
+.mo-video {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+}
+.mo-video img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s, filter 0.3s;
+}
+.mo-video::after {                 /* 살짝 어둡게 깔아 재생 버튼이 잘 보이게 */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0) 45%);
+}
+.mo-play {                        /* 왼쪽 아래: 화면 가운데 문구를 가리지 않게 */
+  position: absolute;
+  z-index: 1;
+  left: 28px;
+  bottom: 24px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+.mo-play::before {                 /* 재생 삼각형 */
+  content: "";
+  position: absolute;
+  left: 26px;
+  top: 20px;
+  border-style: solid;
+  border-width: 12px 0 12px 19px;
+  border-color: transparent transparent transparent var(--text);
+}
+.mo-video-label {
+  position: absolute;
+  z-index: 1;
+  left: 108px;
+  bottom: 44px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+.mo-video:hover img { transform: scale(1.03); }
+.mo-video:hover .mo-play { transform: scale(1.08); }
+
+/* ----- 2. 설명 ----- */
+.mo-about {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 64px;
+  padding-top: 40px;
+  border-top: 1px solid var(--text);
+  font-family: "Pretendard", sans-serif;
+}
+.mo-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mo-point);
+}
+.mo-eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: var(--mo-point);
+}
+.mo-about h1 {
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+.mo-about h1 em { font-style: normal; color: var(--mo-point); }
+
+/* 영상 바로가기 버튼 */
+.mo-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+.mo-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid var(--text);
+  border-radius: 999px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+.mo-links a::after { content: "↗"; }
+.mo-links a:hover { background: var(--text); color: #fff; }
+
+.mo-about-body p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: #4a4a4a;
+}
+.mo-about-body p + p { margin-top: 16px; }
+
+.mo-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 48px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.mo-meta > div { padding: 20px 20px 0 0; }
+.mo-meta > div + div { padding-left: 20px; border-left: 1px solid rgba(0, 0, 0, 0.12); }
+.mo-meta dt {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.mo-meta dd { margin-top: 10px; font-size: 15px; line-height: 1.6; }
+
+/* ----- 3. 장면 캡처 ----- */
+.mo-stills {
+  margin-top: 120px;
+  margin-bottom: 140px;
+}
+.mo-stills-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.mo-stills-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+.mo-stills-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ----- 좁은 화면 ----- */
+@media (max-width: 1024px) {
+  .mo-about { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 768px) {
+  .mo-about, .mo-stills { margin-top: 72px; }
+  .mo-about h1 { font-size: 26px; }
+  .mo-play { left: 14px; bottom: 14px; width: 44px; height: 44px; }
+  .mo-play::before { left: 17px; top: 13px; border-width: 9px 0 9px 14px; }
+  .mo-video-label { left: 68px; bottom: 26px; font-size: 13px; }
+  .mo-meta { grid-template-columns: 1fr; }
+  .mo-meta > div + div { padding-left: 0; border-left: 0; }
+  .mo-stills-grid { grid-template-columns: 1fr; }
+}

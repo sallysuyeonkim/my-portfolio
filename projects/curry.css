@@ -1,0 +1,199 @@
+/* ===== 코레와카레 브랜딩 상세페이지 ===== */
+/* 사이트 공통(style.css) 위에 이 페이지에만 필요한 스타일을 더한다 */
+
+.cw {
+  --cw-orange: #F68624;
+  --cw-yellow: #FFBA1E;
+  --cw-amber: #FDA329;
+  --cw-brown: #423B35;
+  --cw-bg: #FAA620;      /* 브랜드 배경 오렌지 */
+  --cw-max: 1120px;
+  word-break: keep-all;
+}
+
+.cw-hero,
+.cw-about,
+.cw-block {
+  width: calc(100% - var(--side-margin) * 2);
+  max-width: var(--cw-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cw-back {
+  display: inline-block;
+  margin: 40px var(--side-margin) 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: var(--muted);
+}
+.cw-back:hover { color: var(--accent); }
+
+.cw-title {
+  margin-top: 16px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 0.94;
+}
+
+/* ----- 1. 표지: 브랜드 오렌지 위에 시그니처 로고 ----- */
+.cw-hero {
+  margin-top: 32px;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 8;
+  border-radius: 12px;
+  background: var(--cw-bg);
+}
+.cw-hero img { width: min(34%, 380px); height: auto; }
+
+/* ----- 2. 설명 ----- */
+.cw-about {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 64px;
+  padding-top: 40px;
+  border-top: 1px solid var(--text);
+  font-family: "Pretendard", sans-serif;
+}
+.cw-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cw-orange);
+}
+.cw-eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: var(--cw-orange);
+}
+.cw-about h1 {
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+.cw-about h1 em { font-style: normal; color: var(--cw-orange); }
+.cw-about-body p { font-size: 17px; line-height: 1.85; color: #4a4a4a; }
+.cw-about-body p + p { margin-top: 16px; }
+
+.cw-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 48px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.cw-meta > div { padding: 20px 20px 0 0; }
+.cw-meta > div + div { padding-left: 20px; border-left: 1px solid rgba(0, 0, 0, 0.12); }
+.cw-meta dt {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cw-meta dd { margin-top: 10px; font-size: 15px; line-height: 1.6; }
+
+/* ----- 공통 섹션 머리 ----- */
+.cw-block { margin-top: 140px; font-family: "Pretendard", sans-serif; }
+.cw-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cw-orange);
+}
+.cw-block h2 {
+  margin-top: 12px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+.cw-block-lead { margin-top: 14px; max-width: 640px; font-size: 16px; line-height: 1.8; color: #5a5a5a; }
+
+/* ----- 3. 로고 ----- */
+.cw-logos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+.cw-logos figure { margin: 0; }
+.cw-logo-box {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  background: #fff;
+}
+.cw-logo-box--orange { background: var(--cw-bg); }
+.cw-logo-box img { width: 52%; height: auto; }
+.cw-logos figcaption { margin-top: 14px; font-size: 15px; line-height: 1.6; color: #5a5a5a; }
+.cw-logos figcaption b { display: block; color: var(--text); }
+
+/* ----- 4. 컬러 ----- */
+.cw-colors {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.cw-colors li { font-family: "Roboto", sans-serif; font-size: 14px; color: #5a5a5a; }
+.cw-colors li::before {
+  content: "";
+  display: block;
+  aspect-ratio: 1;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: var(--sw);
+}
+.cw-colors b { display: block; margin-bottom: 2px; font-size: 16px; font-weight: 600; color: var(--text); }
+
+/* ----- 5. 어플리케이션 ----- */
+.cw-apps { margin-bottom: 140px; }
+.cw-app-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+.cw-app-grid figure { margin: 0; }
+.cw-app-grid img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.cw-app-grid .wide { grid-column: 1 / -1; }
+.cw-app-grid .tall { aspect-ratio: 4 / 5; }    /* 포스터 · 메뉴지 한 줄 높이 맞춤 */
+.cw-app-grid .even { aspect-ratio: 3 / 2; }    /* 티셔츠 · 패키지 한 줄 높이 맞춤 */
+
+/* ----- 좁은 화면 ----- */
+@media (max-width: 1024px) {
+  .cw-about { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 768px) {
+  .cw-about, .cw-block { margin-top: 72px; }
+  .cw-apps { margin-bottom: 80px; }
+  .cw-about h1 { font-size: 26px; }
+  .cw-hero { aspect-ratio: 4 / 3; }
+  .cw-hero img { width: 56%; }
+  .cw-meta, .cw-logos, .cw-app-grid { grid-template-columns: 1fr; }
+  .cw-meta > div + div { padding-left: 0; border-left: 0; }
+  .cw-colors { grid-template-columns: 1fr 1fr; }
+}
