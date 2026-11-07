@@ -14,5 +14,5 @@
 - GitHub 계정: `sallysuyeonkim`. Mac(M1)에 gh CLI가 Homebrew로 설치되어 있고 로그인되어 있다.
 - 의미 있는 변경마다 한국어 커밋 메시지로 커밋하는 습관을 들이도록 돕는다.
 - 아직 GitHub에 올리지 않았다. 올릴 때는 **GitHub Pages**로 퍼블리싱할 계획이다.
-  - 예상 주소: `https://sallysuyeonkim.github.io/my-portfolio`
+  - 주소: `https://sallysuyeonkim.github.io/portfolio/` (2026-11-07 저장소 이름을 my-portfolio → portfolio로 변경, 예전 주소는 404)
   - 무료 GitHub Pages는 공개(Public) 저장소가 필요하므로, 올리기 전에 사용자에게 공개 여부를 확인한다.

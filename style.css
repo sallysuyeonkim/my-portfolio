@@ -23,7 +23,7 @@ ul { list-style: none; }
 /* ===== 메뉴 (about / projects) ===== */
 .menu {
   display: flex;
-  gap: clamp(24px, 5.2vw, 100px); /* 1920px 화면에서 100px */
+  gap: clamp(20px, 2.5vw, 48px); /* 1920px 화면에서 48px */
   font-size: 18px;
   line-height: 0.94;
   letter-spacing: -0.02em;
