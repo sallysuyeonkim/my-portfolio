@@ -237,3 +237,67 @@ ul { list-style: none; }
   transition: transform 0.3s;
 }
 .tile--img:hover .tile-info .tile-cat { transform: none; }
+
+/* ===== 모바일 메뉴 (햄버거) ===== */
+.nav-toggle, .nav-panel { display: none; }
+
+@media (max-width: 768px) {
+  /* 상단: 이름은 작게, 메뉴 글자 대신 햄버거 버튼 */
+  .top { position: relative; align-items: center; padding-top: 28px; }
+  .logo { font-size: 15px; }
+  .logo span + span { margin-top: 1px; }
+  .about-top { position: relative; }
+  .menu { display: none; }
+  .categories--projects { display: none; }   /* 하위 카테고리는 메뉴 안으로 */
+  .tiles { padding-top: 32px; }
+
+  .nav-toggle {
+    position: absolute;
+    right: calc(var(--side-margin) - 8px);
+    top: 50%;
+    z-index: 30;
+    display: grid;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    padding: 12px 9px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+  }
+  .about-top .nav-toggle { top: -57px; right: -8px; margin-top: 0; }   /* 다른 페이지와 같은 높이 · 오른쪽 끝 */
+  .nav-toggle span {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text);
+    transition: transform 0.25s, opacity 0.2s;
+  }
+  .nav-open .nav-toggle { position: fixed; top: 28px; margin-top: 0; }
+  .nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .nav-panel {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 100px var(--side-margin) 40px;
+    background: var(--bg);
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s, visibility 0.25s;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+  .nav-open .nav-panel { opacity: 1; visibility: visible; }
+  .nav-open, .nav-open body { overflow: hidden; }
+  .nav-main { font-size: 32px; font-weight: 600; line-height: 1; }
+  .nav-sub { display: grid; gap: 14px; margin-top: -4px; padding-left: 2px; font-size: 17px; color: var(--muted); }
+  .nav-main.is-active, .nav-sub a.is-active { color: var(--accent); }
+}

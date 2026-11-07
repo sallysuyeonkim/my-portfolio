@@ -1,0 +1,131 @@
+/* ===== ImFact Scan 상세페이지 ===== */
+/* MyMint 상세페이지 틀(mymint.css)을 그대로 쓰고, 색과 이 페이지에만 있는 블록만 더한다 */
+/* 박스 배경은 화이트 · 그레이만, 보라색은 글자 · 표지 · 작은 칩에만 쓴다 */
+
+.if {
+  --mm-green: #6B12FF;        /* ImFact Primary */
+  --mm-green-dark: #5A0FD6;
+  --if-test: #928AFF;         /* Testnet 배지 */
+  --if-dev: #E4F98C;          /* Devnet 배지 */
+}
+
+/* 표지: ImFact 그라데이션 */
+.if .mm-hero { background: linear-gradient(135deg, #5A0FD6 0%, #8F6BFF 55%, #B2C3FF 100%); }
+
+/* ----- 02 네트워크 컬러 ----- */
+.nets { display: grid; gap: 28px; margin-top: 56px; }
+.net {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.net-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 10px;
+  border-radius: 999px;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+.net-chip::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dot);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+.net-text p { margin-top: 12px; font-size: 15px; line-height: 1.7; color: var(--ink-3); }
+.net img { display: block; width: 100%; border-radius: 12px; box-shadow: 0 10px 36px rgba(20, 20, 60, 0.10); }
+
+.net-rule {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 56px;
+}
+.net-rule article { padding: 28px; border-radius: 20px; background: #fff; }
+.net-rule h3 { font-size: 18px; letter-spacing: -0.02em; }
+.net-rule p { margin-top: 10px; font-size: 15px; line-height: 1.7; color: var(--ink-3); }
+
+/* ----- 03 대시보드 그루핑 ----- */
+.dash { display: grid; gap: 40px; margin-top: 56px; }
+.dash figure { margin: 0; }
+.dash-img { padding: 20px; border-radius: 20px; background: var(--gray-100); }
+.dash-img img { display: block; width: 100%; border-radius: 10px; }
+.dash figcaption { margin-top: 16px; font-size: 15px; line-height: 1.7; color: var(--ink-3); }
+.dash figcaption b { display: block; margin-bottom: 4px; font-size: 16px; color: var(--text); }
+
+/* ----- 04 드롭다운 그루핑 ----- */
+.gnb { margin-top: 56px; }
+.gnb img { display: block; width: 100%; border-radius: 16px; box-shadow: 0 10px 36px rgba(20, 20, 60, 0.10); }
+.gnb figcaption, .drops figcaption { margin-top: 16px; font-size: 15px; line-height: 1.7; color: var(--ink-3); }
+.gnb figcaption b, .drops figcaption b { display: block; margin-bottom: 4px; font-size: 16px; color: var(--text); }
+.drops {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 40px;
+}
+.drops figure { margin: 0; }
+.drop-box {
+  display: grid;
+  place-items: center;
+  height: 520px;
+  padding: 32px;
+  border-radius: 20px;
+  background: #fff;
+  overflow: hidden;
+}
+.drop-box img { max-width: 100%; max-height: 456px; width: auto; height: auto; }
+.drop-box--filter img { max-width: 300px; box-shadow: 0 12px 40px rgba(20, 20, 60, 0.12); border-radius: 12px; }
+.drop-box--mo { align-items: start; padding-bottom: 0; }
+.drop-box--mo img { max-height: none; width: 300px; border-radius: 16px 16px 0 0; box-shadow: 0 10px 36px rgba(20, 20, 60, 0.12); }
+
+/* ----- 05 반응형 ----- */
+.bps {
+  display: grid;
+  grid-template-columns: 1920fr 1440fr 390fr;   /* 실제 화면 폭 비율 그대로 */
+  gap: 20px;
+  align-items: end;
+  margin-top: 56px;
+}
+.bps figure { margin: 0; }
+.bps img { display: block; width: 100%; border-radius: 10px; box-shadow: 0 10px 36px rgba(20, 20, 60, 0.12); }
+.bps figcaption { margin-top: 14px; font-family: "Roboto", sans-serif; font-size: 14px; font-weight: 600; }
+.bps figcaption span { display: block; margin-top: 2px; font-family: "Pretendard", sans-serif; font-weight: 400; color: var(--ink-3); }
+
+.bp-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+}
+.bp-points article { padding: 28px; border-radius: 20px; background: var(--gray-100); }
+.bp-points h3 { font-size: 18px; letter-spacing: -0.02em; }
+.bp-points p { margin-top: 10px; font-size: 15px; line-height: 1.7; color: var(--ink-3); }
+
+/* ----- 06 주요 화면 ----- */
+.if-screens { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 56px; }
+.if-screens figure { margin: 0; }
+.if-screens figcaption { margin-top: 16px; font-size: 15px; line-height: 1.7; color: var(--ink-3); }
+.if-screens figcaption b { display: block; margin-bottom: 4px; font-size: 16px; color: var(--text); }
+
+.if-link { display: inline-block; margin-top: 20px; font-family: "Roboto", sans-serif; font-size: 15px; font-weight: 500; color: var(--mm-green-dark); }
+.if-link:hover { text-decoration: underline; }
+
+/* ----- 좁은 화면 ----- */
+@media (max-width: 1024px) {
+  .net { grid-template-columns: 1fr; gap: 16px; }
+  .net-rule, .bp-points, .drops, .if-screens { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .bps { grid-template-columns: 1fr 1fr; }
+  .bps figure:first-child { grid-column: 1 / -1; }
+  .drop-box { height: 420px; }
+  .drop-box img { max-height: 356px; }
+}

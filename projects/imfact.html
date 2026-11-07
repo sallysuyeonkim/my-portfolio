@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ImFact Scan — Suyeon Kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="../style.css?v=6">
+  <link rel="stylesheet" href="mymint.css?v=2">
+  <link rel="stylesheet" href="imfact.css?v=1">
+</head>
+<body class="mm if">
+
+  <!-- 상단: 작은 로고 + 메뉴 (다른 프로젝트 페이지와 동일) -->
+  <header class="top">
+    <a href="../index.html" class="logo">
+      <span>suyeon kim</span>
+      <span>Hybrid Designer</span>
+    </a>
+    <nav class="menu">
+      <a href="../index.html">about</a>
+      <a href="../projects/all.html" class="is-active">projects</a>
+    </nav>
+  </header>
+
+  <a href="app.html" class="mm-back" data-back>← WEB•APP</a>
+
+  <!-- ========== 표지 ========== -->
+  <p class="mm-title">ImFact Scan UX/UI Design</p>
+  <section class="mm-hero">
+    <div class="mm-hero-text">
+      <p class="mm-eyebrow">Web UX/UI · Blockchain Explorer</p>
+      <h1>ImFact<br>Scan</h1>
+      <p class="mm-hero-lead">방대한 온체인 데이터를 한눈에,<br>임팩트 블록체인의 실시간 검색 엔진</p>
+    </div>
+    <div class="mm-hero-shot" aria-hidden="true">
+      <div class="browser">
+        <span class="browser-bar"><i></i><i></i><i></i></span>
+        <img src="../images/imfact/if-home.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <dl class="mm-meta wrap">
+    <div><dt>Role</dt><dd>UX/UI 디자인</dd></div>
+    <div><dt>Contribution</dt><dd>UX/UI 디자인 100%<br>(서비스 기획 제외)</dd></div>
+    <div><dt>Platform</dt><dd>Web 반응형<br>(PC · Tablet · Mobile)</dd></div>
+    <div><dt>Year</dt><dd>2026</dd></div>
+  </dl>
+
+  <!-- ========== 01. 서비스 소개 ========== -->
+  <section class="block wrap">
+    <p class="block-num">01 — Overview</p>
+    <h2>블록체인의 모든 기록을<br>찾고 확인하는 익스플로러</h2>
+    <p class="lead">ImFact Scan은 임팩트 블록체인 생태계의 실시간 검색 엔진입니다. 블록, 오퍼레이션, 계정, 토큰, NFT까지 방대하고 복잡한 온체인 데이터를 사용자가 한눈에 파악할 수 있도록 <b>정보의 그루핑과 명확한 시각적 위계</b>에 집중해 데이터 대시보드를 디자인했습니다.</p>
+
+    <div class="values">
+      <article><p class="value-num">01</p><h3>컬러로 만든 위계와 구분</h3><p>절제된 컬러 사용으로 정보의 위계를 세우고, Mainnet · Testnet · Devnet처럼 헷갈리기 쉬운 정보는 컬러로 명확히 구분했습니다.</p></article>
+      <article><p class="value-num">02</p><h3>정보 그루핑</h3><p>많은 데이터를 대시보드 카드와 드롭다운 메뉴로 묶어 찾기 쉽게 정리했습니다.</p></article>
+      <article><p class="value-num">03</p><h3>반응형 설계</h3><p>PC · 태블릿 · 모바일 세 구간에 맞춰 표와 메뉴가 자연스럽게 바뀝니다.</p></article>
+    </div>
+
+    <div class="scope">
+      <p class="scope-label">My Scope</p>
+      <p>서비스 기획은 기획팀이 맡았고, 저는 <b>전체 화면의 UX/UI 디자인</b>을 맡았습니다. 기획된 기능과 데이터를 사용자가 헷갈리지 않고 빠르게 읽을 수 있도록 화면 구조와 컴포넌트를 설계했습니다.</p>
+      <a class="if-link" href="https://scan.imfact.im/?chain=mainnet" target="_blank" rel="noopener">scan.imfact.im 바로가기 ↗</a>
+    </div>
+  </section>
+
+  <!-- ========== 02. 네트워크 컬러 ========== -->
+  <section class="block block--gray">
+    <div class="wrap">
+      <p class="block-num">02 — Network Color</p>
+      <h2>지금 보고 있는 네트워크를<br>헤더 컬러로 바로 알 수 있게</h2>
+      <p class="lead">같은 익스플로러로 실제 서비스(Mainnet), 테스트(Testnet), 개발(Devnet) 세 네트워크를 모두 조회합니다. 화면 구조가 똑같아 지금 어느 네트워크를 보고 있는지 헷갈리기 쉬웠기 때문에, <b>레이아웃은 그대로 두고 헤더 컬러와 네트워크 배지만 바꾸는 방식</b>으로 구분했습니다.</p>
+
+      <div class="nets">
+        <div class="net">
+          <div class="net-text"><span class="net-chip" style="--dot:#6B12FF">Mainnet</span><p>브랜드 그라데이션을 쓴 밝은 헤더. 실제 자산이 오가는 기본 네트워크입니다.</p></div>
+          <img src="../images/imfact/if-net-main.jpg" alt="밝은 보라 그라데이션 헤더의 Mainnet 화면" loading="lazy">
+        </div>
+        <div class="net">
+          <div class="net-text"><span class="net-chip" style="--dot:#928AFF">Testnet</span><p>블랙 헤더와 보라색 배지. 로고 옆에 'Testnet'을 함께 표기했습니다.</p></div>
+          <img src="../images/imfact/if-net-test.jpg" alt="블랙 헤더와 보라색 배지의 Testnet 화면" loading="lazy">
+        </div>
+        <div class="net">
+          <div class="net-text"><span class="net-chip" style="--dot:#E4F98C">Devnet</span><p>다크 그레이 헤더와 라임색 배지. 개발용 네트워크임을 한눈에 구분합니다.</p></div>
+          <img src="../images/imfact/if-net-dev.jpg" alt="다크 그레이 헤더와 라임색 배지의 Devnet 화면" loading="lazy">
+        </div>
+      </div>
+
+      <div class="net-rule">
+        <article><h3>바뀌는 것은 헤더뿐</h3><p>본문 레이아웃과 컴포넌트는 세 네트워크 모두 같습니다. 익숙한 화면은 유지하고 구분이 필요한 부분만 바꿨습니다.</p></article>
+        <article><h3>세 번 알려주기</h3><p>헤더 배경색, 로고 옆 네트워크 이름, 우측 상단 배지까지 세 곳에서 현재 네트워크를 알려줍니다.</p></article>
+        <article><h3>Mainnet은 가장 밝게</h3><p>가장 많이 쓰는 Mainnet은 브랜드 컬러로, 테스트용 네트워크는 어두운 톤으로 차이를 크게 두었습니다.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 03. 대시보드 그루핑 ========== -->
+  <section class="block wrap">
+    <p class="block-num">03 — Grouping · Dashboard</p>
+    <h2>많은 숫자를<br>성격별 카드로 묶어서</h2>
+    <p class="lead">익스플로러는 한 화면에 보여줘야 할 숫자가 매우 많습니다. 데이터를 나열하는 대신 <b>성격이 같은 지표끼리 카드로 묶고</b>, 핵심 숫자는 크게, 24시간 변화량은 작은 태그로 붙여 읽는 순서를 정리했습니다.</p>
+
+    <div class="dash">
+      <figure>
+        <div class="dash-img"><img src="../images/imfact/if-dash-home.jpg" alt="블록 · 네트워크 지표 · 14일 그래프로 묶인 홈 대시보드" loading="lazy"></div>
+        <figcaption><b>홈 대시보드</b>블록 정보(높이 · 생성 시간), 네트워크 활동(오퍼레이션 · TPS · 토큰 · 계정), 14일 추이 그래프 세 그룹으로 나눴습니다.</figcaption>
+      </figure>
+      <figure>
+        <div class="dash-img"><img src="../images/imfact/if-dash-account.jpg" alt="활동 기록 · 타임스탬프 · 개인 메모로 묶인 계정 상세 요약" loading="lazy"></div>
+        <figcaption><b>계정 상세</b>계정 활동 요약, 시간 정보와 토큰 분포, 내가 남긴 메모 · 태그를 각각 다른 카드로 분리했습니다.</figcaption>
+      </figure>
+      <figure>
+        <div class="dash-img"><img src="../images/imfact/if-dash-nft.jpg" alt="NFT 리더보드 상단의 지표 카드 네 개" loading="lazy"></div>
+        <figcaption><b>리더보드</b>목록 위에 핵심 지표 카드를 두어, 표를 읽기 전에 전체 규모부터 파악하도록 했습니다.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ========== 04. 드롭다운 그루핑 ========== -->
+  <section class="block block--gray">
+    <div class="wrap">
+      <p class="block-num">04 — Grouping · Dropdown</p>
+      <h2>15개가 넘는 페이지를<br>네 개의 메뉴로</h2>
+      <p class="lead">블록, 오퍼레이션, 토큰, NFT, 노드, 통계, API까지 페이지가 많아 메뉴가 길어지기 쉬웠습니다. 사용자가 찾는 목적에 따라 <b>Blockchain · Leaderboard · Resources · Developers 네 그룹</b>으로 묶고, 필터와 검색 결과도 같은 원칙으로 정리했습니다.</p>
+
+      <figure class="gnb">
+        <img src="../images/imfact/if-gnb.png" alt="네 개의 그룹으로 펼쳐진 상단 메뉴 드롭다운" loading="lazy">
+        <figcaption><b>메뉴 드롭다운</b>기록 조회(Blockchain), 순위(Leaderboard), 분석 도구(Resources), 개발자 도구(Developers)로 나눠 각 메뉴 아래 2~4개의 페이지만 보이게 했습니다.</figcaption>
+      </figure>
+
+      <div class="drops">
+        <figure>
+          <div class="drop-box drop-box--filter"><img src="../images/imfact/if-filter.png" alt="Operation Method 필터 드롭다운" loading="lazy"></div>
+          <figcaption><b>필터 드롭다운</b>오퍼레이션 종류처럼 선택지가 많은 항목은 체크박스 필터로 묶고, 초기화 · 적용 버튼을 아래에 고정했습니다.</figcaption>
+        </figure>
+        <figure>
+          <div class="drop-box drop-box--mo"><img src="../images/imfact/if-mo-search.jpg" alt="Tokens와 NFTs로 나뉜 모바일 검색 결과" loading="lazy"></div>
+          <figcaption><b>검색 결과 드롭다운</b>검색 결과를 Tokens · NFTs 그룹으로 나눠 보여줘, 비슷한 이름의 결과 사이에서도 원하는 항목을 빠르게 고를 수 있습니다.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 05. 반응형 ========== -->
+  <section class="block wrap">
+    <p class="block-num">05 — Responsive</p>
+    <h2>PC부터 모바일까지,<br>세 구간으로 나눈 반응형</h2>
+    <p class="lead">데이터 표가 많은 서비스라 화면 폭이 줄면 정보가 쉽게 잘립니다. <b>PC · 태블릿 · 모바일 세 구간</b>을 기준으로 헤더 · 표 · 카드가 어떻게 바뀌는지 정의했습니다.</p>
+
+    <div class="bps">
+      <figure><img src="../images/imfact/if-r1920.jpg" alt="PC 홈 화면" loading="lazy"><figcaption>PC<span>메뉴 · 로그인 · 네트워크 선택을 한 줄에</span></figcaption></figure>
+      <figure><img src="../images/imfact/if-r1440.jpg" alt="태블릿 폭의 Blocks 화면" loading="lazy"><figcaption>Tablet<span>메뉴는 햄버거로 접고 검색창은 넓게</span></figcaption></figure>
+      <figure><img src="../images/imfact/if-r390.jpg" alt="모바일 Blocks 화면" loading="lazy"><figcaption>Mobile<span>카드는 1열, 표는 가로 스크롤</span></figcaption></figure>
+    </div>
+
+    <div class="bp-points">
+      <article><h3>헤더</h3><p>PC에서는 메뉴와 네트워크 선택을 한 줄에 두고, 화면이 좁아지면 메뉴를 햄버거로 접은 뒤 검색창을 아래 줄에 넓게 배치했습니다.</p></article>
+      <article><h3>데이터 표</h3><p>좁은 화면에서는 표의 열을 줄이지 않고 가로 스크롤로 보여줘, 해시처럼 긴 값도 끝까지 확인할 수 있게 했습니다.</p></article>
+      <article><h3>대시보드 카드</h3><p>가로로 놓인 지표 카드는 화면 폭에 맞춰 세로로 쌓이며, 카드로 묶은 그룹 단위는 그대로 유지됩니다.</p></article>
+    </div>
+  </section>
+
+  <!-- ========== 06. 주요 화면 ========== -->
+  <section class="block block--gray">
+    <div class="wrap">
+      <p class="block-num">06 — Key Screens</p>
+      <h2>같은 원칙으로 설계한<br>상세 · 리더보드 화면</h2>
+
+      <div class="if-screens">
+        <figure>
+          <div class="browser browser--flat"><span class="browser-bar"><i></i><i></i><i></i></span><img src="../images/imfact/if-account.jpg" alt="계정 상세 화면" loading="lazy"></div>
+          <figcaption><b>Account Details</b>요약 카드 아래 탭으로 오퍼레이션 · 아이템 · 포트폴리오를 나눠, 한 계정의 정보를 한 페이지에서 확인합니다.</figcaption>
+        </figure>
+        <figure>
+          <div class="browser browser--flat"><span class="browser-bar"><i></i><i></i><i></i></span><img src="../images/imfact/if-nft.jpg" alt="NFT 리더보드 화면" loading="lazy"></div>
+          <figcaption><b>NFTs Leaderboard</b>지표 카드, 탭(Top Collections · Watchlist), 검색, 순위 표 순서로 위에서 아래로 읽히게 배치했습니다.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="contact">
+    <a href="mailto:sally.suyeon.kim@gmail.com">sally.suyeon.kim@gmail.com</a>
+    <p class="copyright">Copyright 2026. suyeon kim all rights reserved.</p>
+  </footer>
+
+  <script src="../back.js?v=1"></script>
+  <script src="../nav.js?v=2"></script>
+</body>
+</html>
